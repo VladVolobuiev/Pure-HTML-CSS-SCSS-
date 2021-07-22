@@ -1,0 +1,11 @@
+@media (max-width: 1000px) {
+  body {
+    grid-template-rows: 1fr 1fr 20fr 1fr 1fr;
+    grid-template-areas:
+      'header header header'
+      'nav nav nav'
+      'article article article'
+      'aside aside aside'
+      'footer footer footer';
+  }
+}

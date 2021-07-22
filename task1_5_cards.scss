@@ -1,0 +1,151 @@
+$cards_colorR: rgb(214, 0, 0);
+$cards_colorO: rgb(241, 78, 18);
+$cards_colorY: rgb(214, 214, 4);
+$cards_colorG: rgb(82, 82, 82);
+$cards_padding_color: rgb(114, 114, 114);
+
+article {
+  margin: 0;
+}
+.wrap {
+  margin: 5px 40px 40px 5px;
+  max-width: 100%;
+  max-height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 40px;
+  grid-template-areas:
+    'b0 b1 b2'
+    'b3 b4 b5';
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  width: 100%;
+  height: 100%;
+  border-width: 2px;
+  border-style: solid;
+}
+.farmeR {
+  grid-area: b0;
+  border-color: $cards_colorR;
+}
+.farmeO {
+  border-color: $cards_colorO;
+}
+.farmeY {
+  border-color: $cards_colorY;
+}
+.farmeG {
+  border-color: $cards_colorG;
+}
+.card_1 {
+  grid-area: b1;
+}
+.card_2 {
+  grid-area: b2;
+}
+.card_3 {
+  grid-area: b3;
+}
+.card_4 {
+  grid-area: b4;
+}
+.card_5 {
+  grid-area: b5;
+}
+.block {
+  display: flex;
+  justify-content: space-between;
+}
+.sale {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  border-radius: 50px;
+  font-weight: bold;
+}
+.sale p {
+  padding: 0;
+  margin: 0;
+}
+.bgR {
+  background: $cards_colorR;
+}
+.bgO {
+  background: $cards_colorO;
+}
+.bgY {
+  background: $cards_colorY;
+}
+.bgG {
+  background: $cards_colorG;
+}
+.img {
+  display: inline-block;
+  position: relative;
+}
+.size {
+  flex-grow: 1;
+}
+.footer_card {
+  width: 100%;
+  height: 20px;
+  border-top: 2px dotted $cards_padding_color;
+  display: flex;
+  justify-content: stretch;
+}
+
+span {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+.border_footer_card {
+  border-right: 2px solid $cards_padding_color;
+}
+.header_card {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 2px dotted $cards_padding_color;
+}
+.font {
+  font-weight: bold;
+  font-size: 25px;
+}
+.priceR {
+  color: $cards_colorR;
+}
+.priceO {
+  color: $cards_colorO;
+}
+.priceY {
+  color: $cards_colorY;
+}
+.priceG {
+  color: $cards_colorG;
+}
+.del {
+  font-size: 20px;
+  position: relative;
+  color: #000;
+  text-decoration: none;
+}
+.del:before {
+  content: '';
+  border-bottom: 3px solid rgb(128, 128, 128);
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  transform: rotate(10deg);
+}
+
+@import 'task1_5_cards_media.scss';

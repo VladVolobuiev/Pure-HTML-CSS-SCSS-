@@ -1,0 +1,159 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: 'Roboto', 'Times New Roman', Times, serif;
+}
+.wrap {
+  margin: 25px;
+  max-width: 100%;
+  max-height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 25px;
+  grid-template-areas:
+    'mr go mo'
+    'mr my gy';
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  width: 100%;
+  height: 100%;
+  border-width: 2px;
+  border-style: solid;
+}
+.red {
+  grid-area: mr;
+  border-color: rgb(214, 0, 0);
+}
+.orange {
+  border-color: rgb(241, 78, 18);
+}
+.yellow {
+  border-color: rgb(214, 214, 4);
+}
+.mixerO {
+  grid-area: mo;
+}
+.mixerY {
+  grid-area: my;
+}
+.garlicO {
+  grid-area: go;
+}
+.garlicY {
+  grid-area: gy;
+}
+.block {
+  display: flex;
+  justify-content: space-between;
+}
+.sale {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  border-radius: 50px;
+  font-weight: bold;
+}
+.sale p {
+  padding: 0;
+  margin: 0;
+}
+.redS {
+  background: red;
+}
+.orangeS {
+  background: rgb(248, 115, 66);
+}
+.yellowS {
+  background: rgb(211, 211, 20);
+}
+.img_m_pr {
+  display: inline-block;
+  position: relative;
+}
+.imgM {
+  display: inline-block;
+  position: relative;
+}
+.imgG {
+  display: inline-block;
+  position: relative;
+}
+.size {
+  flex-grow: 1;
+}
+.footer {
+  width: 100%;
+  height: 20px;
+  border-top: 2px dotted grey;
+  display: flex;
+  justify-content: stretch;
+}
+
+span {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+.border {
+  border-right: 2px solid gray;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.font {
+  font-weight: bold;
+  font-size: 25px;
+}
+.brR {
+  color: red;
+}
+.brO {
+  color: rgb(253, 96, 39);
+}
+.brY {
+  color: rgb(211, 211, 25);
+}
+.brH {
+  border-bottom: 2px dotted grey;
+}
+.del {
+  font-size: 20px;
+  position: relative;
+  color: #000;
+  text-decoration: none;
+}
+.del:before {
+  content: '';
+  border-bottom: 3px solid gray;
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  transform: rotate(10deg);
+}
+@media (max-width: 1075px) {
+  .wrap {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.5fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      'mr'
+      'go'
+      'mo'
+      'my'
+      'gy';
+  }
+}

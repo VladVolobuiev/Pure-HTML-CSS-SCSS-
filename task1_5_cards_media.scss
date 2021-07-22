@@ -1,0 +1,17 @@
+@media (max-width: 992px) {
+  .wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      'b0 b1'
+      'b2 b3'
+      'b4 b5';
+  }
+}
+@media (max-width: 843px) {
+  .wrap {
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,59 @@
+$text_color: rgb(255, 255, 255);
+$bg_color: rgb(128, 66, 66);
+%column_style {
+  background: rgb(153, 153, 153);
+  opacity: 0.5;
+  padding: 1em;
+  color: $text_color;
+}
+body {
+  margin: 0;
+  display: grid;
+  grid-template-rows: minmax(25px, 50px) 1fr minmax(50px, 100px);
+  grid-template-columns: minmax(100px, 200px) 1fr minmax(150px, 200px);
+  grid-template-areas:
+    'header header header'
+    'nav  article aside'
+    'footer footer footer';
+}
+header {
+  background: $bg_color;
+  grid-area: header;
+}
+.logo {
+  background: url('jpg/logo.png') no-repeat;
+  background-size: contain;
+  background-position: left;
+  height: 35%;
+}
+nav {
+  @extend %column_style;
+  grid-area: nav;
+}
+.link {
+  a {
+    text-decoration: none;
+    color: rgb(187, 185, 63);
+  }
+  a:hover {
+    color: rgb(42, 121, 94);
+  }
+}
+article {
+  grid-area: article;
+  height: calc(100vh - 150px);
+}
+aside {
+  grid-area: aside;
+  @extend %column_style;
+}
+footer {
+  grid-area: footer;
+  background: $bg_color;
+  color: $text_color;
+  text-align: center;
+}
+.contact_style {
+  margin: 5rem 1rem;
+}
+@import 'task1_5_media.scss';
